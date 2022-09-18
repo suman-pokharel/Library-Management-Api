@@ -33,6 +33,11 @@ class BorrowViewSet(viewsets.ModelViewSet):
     authentication_classes=[SessionAuthentication]
     permission_classes= [IsAuthenticatedOrReadOnly]
     
+class CategoryViewSet(viewsets.ModelViewSet):
+    queryset = Category.objects.all()
+    serializer_class = CategorySerializer
+    authentication_classes=[SessionAuthentication]
+    permission_classes= [IsAuthenticatedOrReadOnly]
     
    
     

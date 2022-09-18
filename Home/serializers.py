@@ -13,7 +13,7 @@ class LibrarianSerializer(serializers.ModelSerializer):
         model = User
         fields = "__all__"
 
-        
+
     # To valid data insert through api
     def create(self, validated_data):
         user = User(
@@ -36,4 +36,10 @@ class BookSerializer(serializers.ModelSerializer):
 class BorrowSerializer(serializers.ModelSerializer):
     class Meta:
         model = Borrow
+        fields = "__all__"
+
+
+class CategorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Category
         fields = "__all__"
