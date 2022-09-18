@@ -17,6 +17,6 @@ def send_emails(request):
         # message = "Hi " + obj.student['first_name'] + ", Today is your last date. Please return issued book. "
         # recipient_email = obj.student['email']
         message = "Hi " + 'Ram' + ", Today is your last date. Please return issued book. "
-        recipient_email = obj.student['sumanpokharel8@gmail.com']
+        recipient_email =['sumanpokharel8@gmail.com']
         send_mail( subject, message, 'library.sagarmatha@gmail.com',[ recipient_email], fail_silently=False )
         return HttpResponseRedirect('/send_email?submitted=True') 
