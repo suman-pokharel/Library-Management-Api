@@ -8,6 +8,7 @@ from Home.models import Borrow
 
 # Create your views here.
 
+# <-----send email for student to warn return date----->
 
 def send_emails(request):
     
@@ -20,3 +21,5 @@ def send_emails(request):
         recipient_email =['sumanpokharel8@gmail.com']
         send_mail( subject, message, 'library.sagarmatha@gmail.com',[ recipient_email], fail_silently=False )
         return HttpResponseRedirect('/send_email?submitted=True') 
+
+# end of email sytem
