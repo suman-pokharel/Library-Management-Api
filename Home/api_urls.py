@@ -10,7 +10,7 @@ router.register(r'students', StudentViewSet)
 router.register(r'librarians', LibrarianViewSet)
 router.register(r'books', BookViewSet)
 router.register(r'borrow', BorrowViewSet)
-router.register(r'borrow', CategoryViewSet)
+router.register(r'category', CategoryViewSet)
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
