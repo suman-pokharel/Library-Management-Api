@@ -13,6 +13,8 @@ class LibrarianSerializer(serializers.ModelSerializer):
         model = User
         fields = "__all__"
 
+        
+    # To valid data insert through api
     def create(self, validated_data):
         user = User(
         email=validated_data['email'],
