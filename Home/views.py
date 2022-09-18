@@ -12,6 +12,7 @@ from Home.models import Borrow
 def send_emails(request):
     obj=Borrow.objects.filter(return_date=date.today()).values()
     if Borrow.objects.filter(return_date=date.today()):
+        obj=Borrow.objects.filter(return_date=date.today()).values()
         subject = 'Library Membership Alert'
         # message = "Hi " + obj.student['first_name'] + ", Today is your last date. Please return issued book. "
         # recipient_email = obj.student['email']
